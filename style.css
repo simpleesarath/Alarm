@@ -1,0 +1,174 @@
+body {
+  font-family: consolas;
+  background-color: rgb(59, 46, 57);
+}
+*{
+  margin:0px;               /*i would like normalizing body first*/
+  padding:0px;
+  box-sizing: border-box;
+}
+
+.main-container {           /*background*/
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clock-container {                        /*u can think this the main block we work */
+  background-color:teal;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex-direction;
+  flex-direction: column;
+  align-items: center;
+  animation: transprency 0.5s ease-in-out;
+}
+
+@keyframes transprency {    /*some sort of transprency animation*/
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.clock-image {        /*for setting image width*/
+  width: 100px;
+}
+
+.current-time {        /*for setting time with sizing*/
+  font-size: 26px;
+  margin: 20px 0;
+}
+
+.alarm-form {
+  margin-bottom: 20px;
+}
+
+.time-select-container {            /*for time selection*/
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.time-select-container select {
+  margin-right: 10px;
+  padding: 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.button-container {            /*for btns we just created some bg div and then worked on btns */
+  display: flex;
+  /* min-height: 50px; */
+  flex-direction: row;        /* i wanna Display this buttons in a row */
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  margin-top: 10px;           /* Add some top margin for spacing */
+}
+
+.submit-button,                /* this whole thing is for set,del btns*/
+.stop-button {
+  padding: 10px 10px;
+  font-size: 16px;
+  font-style: italic;
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  width: 100%;
+  margin-bottom: 10px; 
+  margin-right:2px;           /*  for spacing between 2 btns,actually idon't wanna comment u might know abt this one*/
+}
+
+.submit-button {                       /*for btn colors*/
+  background-color: #007bff;
+  border: 1.5px solid #024286;
+}
+.stop-button {
+  background-color: #dc3545;
+  border: 1.5px solid #a71d2a ;
+}
+
+.submit-button:hover {                   /*some hover effects to btns*/
+  background-color: #024286;
+}
+.stop-button:hover {
+  background-color: #a71d2a;
+}
+
+.set-alarm-container-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.alarm {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+}
+
+.delete-alarm {
+  background-color: transparent;
+  border: red;
+  color: #dc3545;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.delete-alarm:hover {
+  color: #a71d2a;
+}
+
+#testButton {                        /*for test btn*/
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: teal;
+  color: white;
+  border: 1px solid black;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 85%;
+  /* margin-left:1200px; */
+  transition: background-color 0.3s ease-in-out;
+}
+
+#testButton:hover {
+  background-color:rgb(6, 230, 230);
+  /* translate: x(50px); */
+}
+.mb {
+  margin-bottom: 10px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.btn:focus {
+  outline-color: black;
+}
+#left_footer {                         /*for some footer*/
+  background-color: white;
+  padding-left: 85%;
+}
+/* #am{
+  background: #000;
+} probably i would like to make a animation but it seems like messy */
+

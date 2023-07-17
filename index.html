@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Alarm Clock" content="Alarm Clock"/>
+    <title>Alarm Clock</title>
+    <link rel="icon" type="image/png" href="favicon-32x32.png">                     <!--favicon-->
+    <link rel="stylesheet" href="style.css" />                                  <!-- extenal style sheet-->
+</head>
+<body>
+    <audio id="alarmSound" src="mixkit-retro-game-emergency-alarm-1000.wav"></audio>      <!--alarm ringtone you change the tone here -->
+    
+    <div class="main-container d-flex">    <!--an main div or u think like its a box-->
+        <div class="clock-container d-flex"> <!--in that main box,we just created a sub box for clock,time,select time,btns-->
+            <div>
+                <img class="clock-image" src="android-chrome-512x512.png">         <!--an image-->
+            </div>
+            <div class="current-time mb" id="current-time">_ : _ : _ </div>
+            <form class="alarm-form d-flex mb">
+                <div class="time-select-container">
+                    <select name="hours" id="hours" required>
+                        <option value="" disabled selected>Hour</option>
+                    </select>
+                    <select required name="minutes" id="minutes">
+                        <option value="" disabled selected>Minutes</option>
+                    </select>
+                    <select required name="seconds" id="seconds">
+                        <option value="" disabled selected>Seconds</option>
+                    </select>
+                    <select required name="am-pm" id="am-pm">
+                        <option value="AM">AM</option>
+                        <option value="PM">PM</option>
+                    </select>
+                </div>
+            </form>
+                <div class="button-container">
+                    <button class="btn submit-button" id="submitButton" type="submit">Set Alarm</button>
+                    <button class="btn stop-button" id="stopButton" type="button">Stop Alarm</button>
+                </div>
+            
+            
+            <div class="set-alarm-container">
+                <div class="set-alarm-container-title mb"><u><b>*UPCOMING ALARMS*</b></u></div>
+                <div class="alarms-container" id="alarms-container"></div>
+            </div>
+            
+        </div>
+    </div>
+    <button id="testButton">Test Alarm Sound</button>
+    <div id="left_footer"><footer id="footer" role="content"><h6>by sarath</h6></footer></div>
+    <script src="script.js"></script>
+</body>
+</html>
